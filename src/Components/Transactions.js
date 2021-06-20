@@ -9,9 +9,7 @@ const Transactions = ({ myTransactions }) => {
     <div>
       <h1>Bank Account Total: {total || 0}</h1>
       {myTransactions.map((transaction, id) => {
-        return (
-          <Transaction transaction={transaction} key={id} id={id} />
-        );
+        return <Transaction transaction={transaction} key={id} id={id} />;
       })}
     </div>
   );
