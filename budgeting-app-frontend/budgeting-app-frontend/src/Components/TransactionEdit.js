@@ -25,24 +25,24 @@ const TransactionEdit = (props) => {
       debugger
     setMyTransaction({ ...myTransaction, [e.target.id]: e.target.value });
   };
-  const fetchTransaction = async () => {
-    try {
-      const res = await axios.get(`${API}/transactions/${id}`);
-      setMyTransaction(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
   useEffect(() => {
+      const fetchTransaction = async () => {
+        try {
+          const res = await axios.get(`${API}/transactions/${id}`);
+          setMyTransaction(res.data);
+        } catch (err) {
+          console.log(err);
+        }
+      };
     fetchTransaction();
-  }, []);
+  }, [id]);
 
 
   return (
     <div>
       <h1> Add a new item</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="date" class="form-label">
+        <label htmlFor="date" className="form-label">
           Date
         </label>
         <input
@@ -53,7 +53,7 @@ const TransactionEdit = (props) => {
           placeholder="date"
           required
         />
-        <label htmlFor="name" class="form-label">
+        <label htmlFor="name" className="form-label">
           Name
         </label>
         <input
@@ -65,7 +65,7 @@ const TransactionEdit = (props) => {
           required
         />
 
-        <label htmlFor="amount" class="form-label">
+        <label htmlFor="amount" className="form-label">
           Amount
         </label>
         <input
@@ -77,7 +77,7 @@ const TransactionEdit = (props) => {
           required
         />
 
-        <label htmlFor="from" class="form-label">
+        <label htmlFor="from" className="form-label">
           From
         </label>
         <input
@@ -89,7 +89,7 @@ const TransactionEdit = (props) => {
           required
         />
         <br />
-        <button type="submit" class="btn btn-success">CREATE NEW ITEM</button>
+        <button type="submit" className="btn btn-success">CREATE NEW ITEM</button>
       </form>
     </div>
   );

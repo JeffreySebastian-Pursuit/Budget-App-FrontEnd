@@ -5,8 +5,8 @@ const Transaction = ({ transaction, id}) => {
 
   return (
     <div>
-      <ul class="list-group">
-        <li class="mt-3 list-group-item list-group-item-secondary">
+      <ul className="list-group">
+        <li className="mt-3 list-group-item list-group-item-secondary">
           {date} <Link to={`/transactions/${id}`}>{name}</Link> {amount}
         </li>
       </ul>

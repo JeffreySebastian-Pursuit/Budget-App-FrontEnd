@@ -23,7 +23,7 @@ const NewTransaction = (props) => {
     <div>
       <h1> Add a new item</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="date" class="text-start">
+        <label htmlFor="date" className="text-start">
           Date
         </label>
         <input
@@ -35,7 +35,7 @@ const NewTransaction = (props) => {
           placeholder="date"
           required
         />
-        <label htmlFor="name" class="text-start">
+        <label htmlFor="name" className="text-start">
           Name
         </label>
         <input
@@ -48,7 +48,7 @@ const NewTransaction = (props) => {
           required
         />
 
-        <label htmlFor="amount" class="text-start">
+        <label htmlFor="amount" className="text-start">
           Amount
         </label>
         <input
@@ -61,7 +61,7 @@ const NewTransaction = (props) => {
           required
         />
 
-        <label htmlFor="from" class="text-start">
+        <label htmlFor="from" className="text-start">
           From
         </label>
         <input
@@ -74,7 +74,7 @@ const NewTransaction = (props) => {
           required
         />
         <br />
-        <button type="submit" class="btn btn-success">
+        <button type="submit" className="btn btn-success">
           CREATE NEW ITEM
         </button>
       </form>
