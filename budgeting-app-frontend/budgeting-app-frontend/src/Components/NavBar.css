@@ -1,0 +1,11 @@
+nav a {
+  text-decoration: none;
+  color: rgb(223, 210, 210);
+  font-weight: bold;
+  margin: 30px;
+  font-size: 30px;
+}
+
+nav a:hover{
+    color: blue;
+}
