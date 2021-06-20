@@ -89,7 +89,7 @@ const TransactionEdit = (props) => {
           required
         />
         <br />
-        <button type="submit" className="btn btn-success">CREATE NEW ITEM</button>
+        <button type="submit" className="btn btn-success">EDIT</button>
       </form>
     </div>
   );
