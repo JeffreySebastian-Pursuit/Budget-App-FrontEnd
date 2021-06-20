@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { withRouter } from "react-router-dom";
+import {useHistory } from "react-router-dom";
 import "./NewTransaction.css";
 
 const NewTransaction = (props) => {
@@ -9,11 +9,12 @@ const NewTransaction = (props) => {
     from: "",
     amount: 0,
   });
+  let history = useHistory()
 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addNewTransaction(myTransaction);
-    props.history.push("/transactions");
+    history.push("/transactions");
   };
   const handleTextChange = (e) => {
     setMyTransaction({ ...myTransaction, [e.target.id]: e.target.value });
@@ -82,4 +83,4 @@ const NewTransaction = (props) => {
   );
 };
 
-export default withRouter(NewTransaction);
+export default NewTransaction;
