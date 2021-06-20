@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
+import "./TransactionDetails.css"
 import {apiURL} from '../Util/apiURL.js'
 const API = apiURL();
 
@@ -48,7 +49,7 @@ const TransactionDetails = (props) => {
       <Link to={`/transactions/${id}/edit`}>
         <button  class="ms-2  btn btn-warning btn-outline-light text-dark">Edit</button>
       </Link>
-      <button onClick={handleDelete} class="ms-2  btn btn-danger btn-outline-light text-dark">Delete</button>
+      <button id="delete" onClick={handleDelete} class="ms-2  btn btn-danger btn-outline-light text-dark">Delete</button>
     </div>
   );
 };

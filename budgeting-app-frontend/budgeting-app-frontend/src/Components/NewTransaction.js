@@ -4,7 +4,7 @@ import "./NewTransaction.css";
 
 const NewTransaction = (props) => {
   const [myTransaction, setMyTransaction] = useState({
-    date:  new Date().toDateString(),
+    date: new Date().toDateString(),
     name: "",
     from: "",
     amount: 0,
@@ -21,12 +21,13 @@ const NewTransaction = (props) => {
 
   return (
     <div>
-        <h1> Add a new item</h1>
-      <form onSubmit={handleSubmit} >
+      <h1> Add a new item</h1>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="date" class="text-start">
           Date
         </label>
         <input
+          className="newItem"
           id="date"
           value={myTransaction.date}
           type="date"
@@ -38,6 +39,7 @@ const NewTransaction = (props) => {
           Name
         </label>
         <input
+          className="newItem"
           id="name"
           value={myTransaction.name}
           type="text"
@@ -50,6 +52,7 @@ const NewTransaction = (props) => {
           Amount
         </label>
         <input
+          className="newItem"
           id="amount"
           value={myTransaction.amount}
           type="number"
@@ -62,6 +65,7 @@ const NewTransaction = (props) => {
           From
         </label>
         <input
+          className="newItem"
           id="from"
           value={myTransaction.from}
           type="text"
@@ -70,7 +74,9 @@ const NewTransaction = (props) => {
           required
         />
         <br />
-        <button type="submit" class="btn btn-success">CREATE NEW ITEM</button>
+        <button type="submit" class="btn btn-success">
+          CREATE NEW ITEM
+        </button>
       </form>
     </div>
   );
