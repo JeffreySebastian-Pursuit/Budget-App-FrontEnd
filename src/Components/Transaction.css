@@ -10,3 +10,13 @@ li{
     color: black;
     gap: 5px;
 }
+
+
+@media only screen and (max-width: 650px) {
+    li{
+        list-style:  none;
+        width: 220px;
+        color: black;
+        font-size: 12px;
+    }
+ }
