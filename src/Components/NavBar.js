@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './NavBar.css'
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-xl navbar-dark bg-dark">
-      <Link  to="/">Home</Link>
-      <Link to="/transactions">Transactions</Link>
-      <Link to="/transactions/new">New Transaction</Link>
+      <NavLink  to="/">Home</NavLink>
+      <NavLink to="/transactions">Transactions</NavLink>
+      <NavLink to="/transactions/new">New Transaction</NavLink>
     </nav>
   );
 };
