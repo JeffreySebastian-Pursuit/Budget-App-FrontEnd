@@ -3,7 +3,7 @@ import Transaction from "./Transaction";
 const Transactions = ({ myTransactions }) => {
   let total = 0;
   myTransactions.forEach((transaction) => {
-    return (total += Number(transaction.amount));
+    (total += Number(transaction.amount));
   });
   return (
     <div>
